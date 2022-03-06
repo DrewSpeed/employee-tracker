@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const db = require('./config/connection');
 const prompts = require('./config/prompts');
-const switchHandler = require('./config/switch-handler');
+const queryHandler = require('./config/query-handler');
 
 // db.query(`source db/db.sql`);
 // db.query(`source db/schema.sql`);

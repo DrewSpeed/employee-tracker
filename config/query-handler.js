@@ -1,9 +1,10 @@
 const db = require("./connection");
 const cTable = require('console.table');
 
+
 showDepartments = () => {
     console.log(`----------------------------------`);
-    const sql = 'SELECT * FROM department;';
+    const sql = 'SELECT * FROM departments;';
     db.query(sql, function (err, res) {
         if (err) throw err;
         deptTable = [['ID', 'DEPARTMENT']] 
@@ -17,14 +18,17 @@ showDepartments = () => {
 
 showRoles = () => {
     console.log(`----------------------------------`);
-    const sql = 'SELECT * FROM role;'
+    const sql = `SELECT * FROM roles
+    LEFT JOIN departments ON roles.department_id  = departments.id;`
     db.query(sql, function (err, res) {
         if (err) throw err;
         roleTable = [['Job Title', 'Role ID', 'Department', 'Salary']]
         res.forEach((role) => {
-            var rows = [role.title, role.id, role.department_id, role.salary]
+            var rows = [role.title, role.id, role.department, role.salary]
             roleTable.push(rows);
         })
         console.table(roleTable[0], roleTable.slice(1))
     })
 };
+
+//     CONSTRAINT fk_deptid FOREIGN KEY (department_id) References departments(id) ON DELETE SET NULL
