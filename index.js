@@ -12,14 +12,16 @@ inquirer.prompt(prompts.optionPrompt)
     .then(input => {
         switch (input.main) {
             case "View All Departments":
-                viewDepartments();
+                showDepartments();
                 break;
-            "View All Roles",
+            case "View All Roles":
+                showRoles();
+                break;
             "View All Employees",
             "Add a Department",
             "Add a Role",
             "Add an Employee",
             "Update an Employee Role"
         }
-});
+    });
 
