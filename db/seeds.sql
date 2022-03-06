@@ -1,3 +1,4 @@
+
 INSERT INTO department (name)
 VALUES 
     ('Engineering'),
@@ -13,8 +14,8 @@ VALUES
     ('Accountant', 120000, 2),
     ('Legal Team Lead', 230000, 3),
     ('Lawyer', 150000, 3),
-    ('Sales Lead', 75000, 4);
-    ('Salesperson', 50000, 4),
+    ('Sales Lead', 75000, 4),
+    ('Salesperson', 50000, 4);
 
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
@@ -23,13 +24,14 @@ VALUES
     ('Saul', 'Monet', 2, 1),
     ('Tiffany', 'Searcy', 2, 1),
     ('Daniel', 'Cho', 3, null),
-    ('David', 'Stanotis', 4, 4)
+    ('David', 'Stanotis', 4, 4),
     ('Robert', 'Finkle', 4, 4),
     ('Tamera', 'Washington', 5, null),
     ('Zoe', 'Kensington', 6, 7),
     ('Said', 'Halimi', 6, 7),
-    ('Ava', 'Chmielewski', 7, null)
+    ('Ava', 'Chmielewski', 7, null),
     ('Louie', 'Andrews', 8, 10),
-    ('Noemi' 'Dale', 8, 10)
-    ('Henry', 'Oyama', 8, 10);
+    ('Noemi', 'Dale', 8, 10),
+    ('Henry', 'Oyama', 8, 10),
+    ('William', 'Howell', 8, 10);
     
